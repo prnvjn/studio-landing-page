@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 .hero-div{
-    background-image: url("./images/desktop/image-hero.jpg");
+    background-image: url("./images/images/desktop/image-hero.jpg");
     width:100%;
     height: 80vh;
     background-size: cover;
@@ -33,13 +33,20 @@ nav{
     
     
 }
+body{
+    scroll-snap-type: y mandatory;
+}
+body section{
+   
+}
 .navigation{
     flex-grow: 1;
     display: flex;
     justify-content: space-between;
     max-width: 480px;
     list-style: none;
-    
+    color: var(--white);
+    padding: 0;
 }
 .hero-heading{
     flex-grow: 1;
@@ -62,7 +69,7 @@ nav{
 .about{
     max-width: 1120px;
     height: 100vh;
-    
+    scroll-snap-align: start;
     margin: 0 auto;
     display: flex;
    align-items: center;
@@ -108,9 +115,11 @@ nav{
 }
 /* second section*/
 .creations{
+    scroll-snap-align: start;
     max-width: 1120px;
     margin: 0 auto;
-    height: 100vh;
+    height: 120vh;
+    margin-bottom: 100px;
 }
 .creations-heading{
     display:flex;
@@ -134,8 +143,9 @@ nav{
 }
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: repeat(4 1fr);
+    height: 100vh;
     gap: 20px;
 }
 
@@ -148,67 +158,74 @@ nav{
     grid-row: 1/2;
     
 }
-.g::before{
-    background:url(./images/desktop/image-curiosity.jpg);
+.a::before{
+    background-image: url(./images/images/desktop/image-deep-earth.jpg);
 }
+
 .b{
 
     grid-column: 2/3;
     grid-row: 1/2;
     
 }
-.a::before{
-    background-image: url(./images/desktop/image-deep-earth.jpg);
+.b::before{
+    background-image: url(./images/images/desktop/image-night-arcade.jpg);
 }
+
 .c{
         grid-column: 3/4;
         grid-row: 1/2;
       
  }
- .h::before{
-    background-image: url(./images/desktop/image-fisheye.jpg);
+ .c::before{
+    background-image: url(./images/images/desktop/image-soccer-team.jpg);
 }
+
 
 .d{
     grid-column: 4/5;
     grid-row: 1/2;
     
 }
-.e::before{
-    background-image: url(./images/desktop/image-from-above.jpg);
+.d::before{
+    background-image: url(./images/images/desktop/image-grid.jpg);
 }
+
 .e{
     grid-column: 1/2;
     grid-row: 2/3;
   
 }
-.b::before{
-    background-image: url(./images/desktop/image-night-arcade.jpg);
+.e::before{
+    background-image: url(./images/images/desktop/image-from-above.jpg);
 }
+
 .f{
     grid-column: 2/3;
     grid-row: 2/3;
     
 }
 .f::before{
-    background-image: url(./images/desktop/image-pocket-borealis.jpg);
+    background-image: url(./images/images/desktop/image-pocket-borealis.jpg);
 }
 .g{
     grid-column: 3/4;
     grid-row: 2/3;
    
 }
-.c::before{
-    background-image: url(./images/desktop/image-soccer-team.jpg);
+.g::before{
+    background:url(./images/images/desktop/image-curiosity.jpg);
 }
+
 .h{
     grid-column: 4/5;
     grid-row: 2/3;
 
 }
-.d::before{
-    background-image: url(./images/desktop/image-grid.jpg);
+.h::before{
+    background-image: url(./images/images/desktop/image-fisheye.jpg);
 }
+
 .griditems{
    position: relative;
    
@@ -240,4 +257,36 @@ nav{
 .griditems:hover{
     
    color:var(--black) ;
+}
+footer{
+   height: 150px;
+   display: flex;
+   flex-direction: column;
+    background-color: var(--black);
+   justify-content: center;
+   
+
+}
+
+.social{
+    max-width: 1120px;
+    margin: 0 auto;
+  display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 38px;
+}
+.links{
+    max-width: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.footernav{
+    display: flex;
+    max-width: 1120px;
+    margin: 0 auto;
+    color: var(--white);
+    justify-content: space-between;
+    align-items: center;
 }
